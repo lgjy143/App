@@ -71,7 +71,7 @@ namespace App.Framework
             StartupModule = startupModule;
             IocManager = iocManager;
 
-            //PlugInSources = new PlugInSourceList();
+            PlugInSources = new PlugInSourceList();
             _logger = NullLogger.Instance;
 
             AddInterceptorRegistrars();
@@ -137,7 +137,7 @@ namespace App.Framework
                 RegisterBootstrapper();
                 IocManager.IocContainer.Install(new AppCoreInstaller());
 
-                //IocManager.Resolve<AppPlugInManager>().PlugInSources.AddRange(PlugInSources);
+                IocManager.Resolve<AppPlugInManager>().PlugInSources.AddRange(PlugInSources);
                 IocManager.Resolve<AppStartupConfiguration>().Initialize();
 
                 _moduleManager = IocManager.Resolve<AppModuleManager>();

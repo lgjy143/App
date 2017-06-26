@@ -33,7 +33,7 @@ namespace App.Framework.Dependency.Installers
                 //Component.For<IEmbeddedResourcesConfiguration, EmbeddedResourcesConfiguration>().ImplementedBy<EmbeddedResourcesConfiguration>().LifestyleSingleton(),
                 Component.For<IAppStartupConfiguration, AppStartupConfiguration>().ImplementedBy<AppStartupConfiguration>().LifestyleSingleton(),
                 Component.For<ITypeFinder, TypeFinder>().ImplementedBy<TypeFinder>().LifestyleSingleton(),
-                //Component.For<IAppPlugInManager, AppPlugInManager>().ImplementedBy<AppPlugInManager>().LifestyleSingleton(),
+                Component.For<IAppPlugInManager, AppPlugInManager>().ImplementedBy<AppPlugInManager>().LifestyleSingleton(),
                 Component.For<IAppModuleManager, AppModuleManager>().ImplementedBy<AppModuleManager>().LifestyleSingleton(),
                 Component.For<IAssemblyFinder, AppAssemblyFinder>().ImplementedBy<AppAssemblyFinder>().LifestyleSingleton()
                 //Component.For<ILocalizationManager, LocalizationManager>().ImplementedBy<LocalizationManager>().LifestyleSingleton()
